@@ -1,0 +1,11 @@
+{
+  "name": "sample-population",
+  "version": "1.0.0",
+  "description": "Returns sample size for population numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony O'Neill atostudios <anthony.thomas.oneill@gmail.com>",
+  "license": "ISC"
+}
