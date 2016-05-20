@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/atostudios/sample-population.git"
+  },
   "author": "Anthony O'Neill atostudios <anthony.thomas.oneill@gmail.com>",
   "license": "ISC"
 }

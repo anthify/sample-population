@@ -1,14 +1,40 @@
-exports.population = function(population, confidence, response, errorMargin) {
-  if (!confidence) {
-    confidence = 1.98;
+exports.population = function(params) {
+
+  var confidence,
+      response,
+      population,
+      errorMargin;
+
+  if (!params || typeof params !== 'object' || !params.population) {
+    return 'please enter population';
   }
-  if (!response) {
-    response = .50;
+
+  if (params) {
+
+    if (!params.confidence) {
+      confidence = 1.98;
+    } else {
+      confidence = params.confidence;
+    }
+
+    if (!params.response) {
+      response = .50;
+    } else {
+      response = params.response;
+    }
+
+    if (!params.errorMargin) {
+      errorMargin = .5;
+    } else {
+      errorMargin = params.errorMargin;
+    }
+
   }
-  if (!errorMargin) {
-    errorMargin = .5;
-  }
+
  var x = (Math.pow(confidence, 2) * response) * (100.0 - response);
+
  var y = (population - 1.0) * (Math.pow(errorMargin, 2)) + x;
+
  return Math.ceil(population * x / y / 2);
+
 }
