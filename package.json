@@ -4,12 +4,16 @@
   "description": "Returns sample size for population numbers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/atostudios/sample-population.git"
+    "type": "git",
+    "url": "https://github.com/atostudios/sample-population.git"
   },
   "author": "Anthony O'Neill atostudios <anthony.thomas.oneill@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }

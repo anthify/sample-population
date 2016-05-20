@@ -33,8 +33,8 @@ exports.population = function(params) {
 
  var x = (Math.pow(confidence, 2) * response) * (100.0 - response);
 
- var y = (population - 1.0) * (Math.pow(errorMargin, 2)) + x;
+ var y = (params.population - 1.0) * (Math.pow(errorMargin, 2)) + x;
 
- return Math.ceil(population * x / y / 2);
+ return Math.ceil(params.population * x / y / 2);
 
 }
