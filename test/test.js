@@ -18,5 +18,4 @@ describe('Population Sample', function() {
   it('should return population sample with default params', function() {
     expect(subject.population({population: 1234})).to.equal(240);
   })
-
 });
