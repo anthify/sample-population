@@ -1,8 +1,13 @@
 {
   "name": "sample-population",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Returns sample size for population numbers",
-  "keywords": ["sample", "sampling", "size", "population"],
+  "keywords": [
+    "sample",
+    "sampling",
+    "size",
+    "population"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha"
