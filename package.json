@@ -1,6 +1,6 @@
 {
   "name": "sample-population",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Returns sample size for population numbers",
   "keywords": [
     "sample",
