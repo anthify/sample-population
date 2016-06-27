@@ -5,30 +5,35 @@ exports.population = function(params) {
       population,
       errorMargin;
 
-  if (!params || typeof params !== 'object' || !params.population) {
-    return 'please enter population';
+  if (!params || typeof params !== 'object' || params.population === 'undefined') {
+    throw new Error ('please enter population');
   }
 
-  if (params) {
-
-    if (!params.confidence) {
-      confidence = 1.98;
-    } else {
-      confidence = params.confidence;
+  if (typeof params === 'object') {
+    if (params.population === 0) {
+      return 0;
     }
-
-    if (!params.response) {
-      response = .50;
-    } else {
-      response = params.response;
+    if (!params.population) {
+      throw new Error ('please enter population');
     }
+  }
 
-    if (!params.errorMargin) {
-      errorMargin = .5;
-    } else {
-      errorMargin = params.errorMargin;
-    }
+  if (!params.confidence) {
+    confidence = 1.98;
+  } else {
+    confidence = params.confidence;
+  }
 
+  if (!params.response) {
+    response = .50;
+  } else {
+    response = params.response;
+  }
+
+  if (!params.errorMargin) {
+    errorMargin = .5;
+  } else {
+    errorMargin = params.errorMargin;
   }
 
  var x = (Math.pow(confidence, 2) * response) * (100.0 - response);
